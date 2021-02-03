@@ -77,15 +77,98 @@ and open the template in the editor.
         </devengos>
         <deduciones>
             <deducion trabajador="16">
-                
+                <seguridad_social>
+                    <cc><!--Contingencias comunes-->
+                        <base_cotizacion>1959</base_cotizacion>
+                        <portentaje>4,70</portentaje>
+                        <aportacion>97,40</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                      
+                    </cc>
+                    <desempleo>
+                        <base_cotizacion>2102</base_cotizacion>
+                        <portentaje>1,55</portentaje><!--Este porcentaje depende si el contrato es a jornada completa o parcial-->
+                        <aportacion>32,58</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->
+                    </desempleo>
+                    <fp><!--Formación Profesional-->
+                        <base_cotizacion>2102</base_cotizacion>
+                        <portentaje>0,10</portentaje>
+                        <aportacion>2,10</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                                      
+                    </fp>
+                    <horas_extraordinarias>
+                        <fuera_mayor>
+                            <base_cotizacion>100</base_cotizacion>
+                            <portentaje>2</portentaje>
+                            <aportacion>2</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                                      
+                        </fuera_mayor>
+                        <otras_horas>
+                            <base_cotizacion>60</base_cotizacion>
+                            <portentaje></portentaje>
+                            <aportacion>2</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                                      
+                        </otras_horas>
+                    </horas_extraordinarias>
+                    <total_aportaciones><!--La suma de todas las aportaciones anteriores constituyen este total-->
+                        130,77
+                    </total_aportaciones>
+                </seguridad_social>
+                <irpf><!--Retenciones a cuenta del IRPF-->
+                    <base_cotizacion>1852</base_cotizacion>
+                    <portentaje>13</portentaje>
+                    <aportacion>240,76</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                                            
+                </irpf>
+                <total_deducir ><!--Este total es la suma de aportaciones de IRPF + el total de aportaciones de la Seguridad social-->
+                    371,59
+                </total_deducir>   
             </deducion>
+            <deducion trabajador="18">
+                <seguridad_social>
+                    <cc><!--Contingencias comunes-->
+                        <base_cotizacion>1959</base_cotizacion>
+                        <portentaje>4,70</portentaje>
+                        <aportacion>97,40</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                      
+                    </cc>
+                    <desempleo>
+                        <base_cotizacion>2102</base_cotizacion>
+                        <portentaje>1,55</portentaje><!--Este porcentaje depende si el contrato es a jornada completa o parcial-->
+                        <aportacion>32,58</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->
+                    </desempleo>
+                    <fp><!--Formación Profesional-->
+                        <base_cotizacion>2102</base_cotizacion>
+                        <portentaje>0,10</portentaje>
+                        <aportacion>2,10</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                                      
+                    </fp>
+                    <horas_extraordinarias>
+                        <fuera_mayor>
+                            <base_cotizacion>100</base_cotizacion>
+                            <portentaje>2</portentaje>
+                            <aportacion>2</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                                      
+                        </fuera_mayor>
+                        <otras_horas>
+                            <base_cotizacion>60</base_cotizacion>
+                            <portentaje></portentaje>
+                            <aportacion>2</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                                      
+                        </otras_horas>
+                    </horas_extraordinarias>
+                    <total_aportaciones><!--La suma de todas las aportaciones anteriores constituyen este total-->
+                        130,77
+                    </total_aportaciones>
+                </seguridad_social>
+                <irpf><!--Retenciones a cuenta del IRPF-->
+                    <base_cotizacion>1852</base_cotizacion>
+                    <portentaje>13</portentaje>
+                    <aportacion>240,76</aportacion><!--Estas aportaciones se sumaran, para que salgan el total a deducir-->                                            
+                </irpf>
+                <total_deducir ><!--Este total es la suma de aportaciones de IRPF + el total de aportaciones de la Seguridad social-->
+                    371,59
+                </total_deducir>   
+            </deducion>          
         </deduciones>
-
-
-
-
-
-
-
-
+        <liquido_percibir>
+            <recibe trabajador="16"><!--Se calcula mediante la renta de los devengos 
+                                        menos total de las deduciones -->
+                1500,50 <!--Este seria el sueldo total que recibiria el trabajador por sus prestaciones-->
+            </recibe>
+            <recibe trabajador="18"><!--Se calcula mediante la renta de los devengos 
+                                        menos total de las deduciones -->
+                1480,47 <!--Este seria el sueldo total que recibiria el trabajador por sus prestaciones-->
+            </recibe>
+        </liquido_percibir>
 </nominas>
