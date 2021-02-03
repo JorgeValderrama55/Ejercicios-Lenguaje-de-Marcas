@@ -49,8 +49,8 @@ and open the template in the editor.
                             <transporte>150</transporte>
                         </no_salariales>
                     </complementos>
-                    <total_devengo> 
-                        salario_base + complementos(salariales + no_salariales) 
+                    <total_devengo> <!-- salario_base + complementos(salariales + no_salariales) -->
+                        2019
                     </total_devengo>>
                 </percepciones_salariales>
 
@@ -68,13 +68,18 @@ and open the template in the editor.
                             <transporte>150</transporte>
                         </no_salariales>
                     </complementos>
-                    <total_devengo> 
-                        salario_base + complementos(salariales + no_salariales) 
+                    <total_devengo> <!-- salario_base + complementos(salariales + no_salariales) -->
+                        1916
                     </total_devengo>>
                 </percepciones_salariales>
 
             </devengo>
         </devengos>
+        <deduciones>
+            <deducion trabajador="16">
+                
+            </deducion>
+        </deduciones>
 
 
 
